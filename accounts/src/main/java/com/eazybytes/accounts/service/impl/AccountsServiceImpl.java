@@ -85,4 +85,15 @@ public class AccountsServiceImpl implements IAccountsService {
         }
         return isUpdated;
     }
+
+    @Override
+    public boolean deleteAccount(String mobileNumber) {
+        Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber)
+        );
+        Long customerId = customer.getCustomerId();
+        customerRepository.deleteById(customerId);
+        accountsRepository.deleteByCustomerId(customerId);
+        return true;
+    }
 }
