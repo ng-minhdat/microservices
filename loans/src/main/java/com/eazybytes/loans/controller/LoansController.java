@@ -22,7 +22,7 @@ public class LoansController {
 
     @PostMapping("/create")
     public ResponseEntity<ResponseDto> createLoan(
-            @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+            @Pattern(regexp = "[0-9]{10}", message = "Mobile number must be 10 digits")
             @RequestParam
             String mobileNumber
     ) {
@@ -34,7 +34,7 @@ public class LoansController {
 
     @GetMapping("/fetch")
     public ResponseEntity<LoansDto> fetchLoan(
-            @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+            @Pattern(regexp = "[0-9]{10}", message = "Mobile number must be 10 digits")
             @RequestParam
             String mobileNumber
     ) {
@@ -59,7 +59,7 @@ public class LoansController {
 
     @DeleteMapping("/delete")
     public ResponseEntity<ResponseDto> deleteLoan(
-            @Pattern(regexp = "(^$|[0-9]{10})", message = "Mobile number must be 10 digits")
+            @Pattern(regexp = "[0-9]{10}", message = "Mobile number must be 10 digits")
             @RequestParam
             String mobileNumber
     ) {
