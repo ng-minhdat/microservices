@@ -1,0 +1,12 @@
+spring.config.activate.on-profile: "qa"
+
+build.version: 2.0
+
+cards:
+  message: "Welcome to EazyBank cards related QA APIs"
+  contactDetails:
+    name: "Angela Kim"
+    email: "angela@eazybank.com"
+  onCallSupport:
+    - (661) 555-5431
+    - (661) 523-5134
