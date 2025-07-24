@@ -1,0 +1,10 @@
+build: "3.0"
+
+loans:
+  message: "Welcome to EazyBank loans related local APIs"
+  contactDetails:
+    name: "Kakashi"
+    email: "kakashi@eazybank.com"
+  onCallSupport:
+    - (552) 555-5431
+    - (552) 523-5134
