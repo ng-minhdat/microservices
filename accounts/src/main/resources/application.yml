@@ -20,3 +20,5 @@ spring:
   profiles:
     active:
       - "qa"
+  config:
+    import: configserver:http://localhost:8071/
