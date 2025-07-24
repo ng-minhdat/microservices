@@ -20,3 +20,9 @@ spring:
     import: configserver:http://localhost:8071/
   profiles:
     active: "qa"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
