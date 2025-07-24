@@ -14,4 +14,20 @@ spring:
   h2:
     console:
       enabled: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active: "prod"
 
+build.version: 3.0
+
+cards:
+  message: "Welcome to EazyBank cards related local APIs"
+  contactDetails:
+    name: "Sara Kim"
+    email: "sara@eazybank.com"
+  onCallSupport:
+    - (551) 555-5431
+    - (551) 523-5134
