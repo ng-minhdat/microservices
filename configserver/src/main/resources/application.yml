@@ -3,9 +3,13 @@ server:
   port: 8071
 spring:
   profiles:
-    active: native
+    active: git
   cloud:
     config:
       server:
-        native:
-          search-locations: classpath:/config
+        git:
+          uri: https://github.com/ng-minhdat/microservices-config.git
+          default-label: main
+          timeout: 5
+          clone-on-start: true
+          force-pull: true
